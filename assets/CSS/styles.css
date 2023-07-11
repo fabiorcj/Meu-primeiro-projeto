@@ -10,6 +10,51 @@
 html {
     scroll-behavior: smooth;
 }
+/* botões */
+.botao {
+    position: fixed;
+    bottom: 1rem;
+    right: 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 3;
+    transform: rotate(-90deg);
+    background-color: #ffdbc1;
+    border-radius: 50%;
+}
+.botao2 {
+    background-color: #ffdbc1;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+    right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: black;
+    z-index: 3;
+    position: absolute;
+}
+.botao3 {
+    background-color: #ffdbc1;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+    right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: black;
+    z-index: 3;
+    position: absolute;
+}
+
 body {
     font-family: 'open sans', sans-serif;
     color: rgb(255, 219, 194);
@@ -238,6 +283,8 @@ body {
 
 
 /* aqui acaba o main */
+/* sobre mim */
+
 #sobremim {
     width: 100%;
     height: 100%;
@@ -284,6 +331,7 @@ body {
     right: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
     z-index:1 ;
+    display: flex;
 }
 
 .sobremim-img {
@@ -308,6 +356,7 @@ body {
     border: 0.01rem solid black;
     
 }
+
 .img-2:nth-child(1) {
     margin-top: 10rem;
     margin-left: 3rem;
@@ -351,6 +400,131 @@ body {
 
 }
 .img-2:nth-child(5):hover {
+    width: 16.5rem;
+    height: 13.37rem;
+    transition: all 300ms ease-in-out;
+
+}
+/* aqui acaba o sobre mim */
+/* Pizza */
+#pizza {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('../img/img2.png');
+    background-size: cover;
+    color:#ffdbc1;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.pizza h4 {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.2rem;
+    margin-left: 0.4rem;
+    text-shadow: 0.1875rem 0.1875rem black;
+    
+}
+.pizza p {
+    font-size: 1.35rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.4rem;
+    border-radius: 1rem;
+}
+.pizza-content {
+    width: 75rem;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 32rem;
+    z-index: 2;
+    position: relative;
+}
+.pizza {
+    margin-top: 5rem; 
+    text-align: start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+.sombra-3 {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+    z-index:1 ;
+}
+
+.pizza-img {
+    width: 41.6875rem;
+    height: 100vh;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 33vh 33vh 33vh;
+
+    
+}
+.img-3 {
+    width: 14.5rem;
+    height: 11.37rem;
+    margin: 0.625rem;
+    border-radius: 3rem;
+    transition: all 300ms ease-in-out;
+    box-shadow: 0.5rem 0.5rem 1px rgba(0, 0, 0, 0.2);
+    border: 0.01rem solid black;
+    
+}
+.img-3:nth-child(1) {
+    margin-top: 10rem;
+
+}
+.img-3:nth-child(4) {
+    margin-left: 2rem;
+    
+
+}
+.img-3:nth-child(3) {
+    margin-top: 10rem;
+   margin-left: 2rem;
+}
+.img-3:nth-child(5) {
+margin-left: 10rem;
+   
+    grid-column: span 2;
+}
+.img-3:nth-child(1):hover {
+    width: 16.5rem;
+    height: 13.37rem;
+    transition: all 300ms ease-in-out;
+
+}
+.img-3:nth-child(2):hover {
+    width: 16.5rem;
+    height: 13.37rem;
+    transition: all 300ms ease-in-out;
+
+}
+.img-3:nth-child(3):hover {
+    width: 16.5rem;
+    height: 13.37rem;
+    transition: all 300ms ease-in-out;
+
+}
+
+.img-3:nth-child(4):hover {
+    width: 16.5rem;
+    height: 13.37rem;
+    transition: all 300ms ease-in-out;
+
+}
+.img-3:nth-child(5):hover {
     width: 16.5rem;
     height: 13.37rem;
     transition: all 300ms ease-in-out;
