@@ -1,0 +1,253 @@
+:root {
+    --primary-color: #ffdbc1
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'open sans', sans-serif;
+    color: rgb(255, 219, 194);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.div-main::after {
+    content: '';
+    left: 0;
+    top: 50%;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 800ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.8) 100%);
+
+}
+.div-main:hover::after {
+    content: '';
+    left: 0;
+    height: 80%;
+    top: 0;
+    width: 0.01rem;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 500ms ease-in-out;
+    z-index: 1;
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 01) 100%, rgba(255, 187, 0, 0,1) 60%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* ceomço heading */
+.heading {
+    display: flex;
+    width: 100%;
+    height: 2rem;
+    position: fixed;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.8) 100%);
+}
+.div-heading {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 75rem;
+    height: 100%;
+    margin: auto;
+    align-items: flex-start;
+    z-index: 2;
+}
+.h1-heading {
+    font-size: 0.8rem;
+    margin-top: 0.625rem;
+    padding: 0.1875rem;
+    border-radius:0.4375rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.6) 100%);
+}
+.nav-top {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-top ul {
+    display: flex;
+    list-style: none;
+}
+.nav-top ul li a {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.6) 100%);
+    border-radius:0.4375rem;
+    padding: 0.1875rem0.4375rem;
+    display: block;
+    position: relative;
+}
+.nav-top ul li a::after {
+        content: '';
+        position: absolute;
+        bottom:0.125rem;
+        left: 2.5rem;
+        width: 0%;
+        height: 0.055rem;
+        background-color: #ffdbc1;
+        transition: all 300ms ease-in-out;
+ }
+ .nav-top ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom:0.125rem;
+    left: 0.375rem;
+    width: 87%;
+    height: 0.055rem;
+    background-color: #ffdbc1;
+    z-index: 20 ;
+ }
+.img {
+    height: 90%;
+    padding:0.0625rem;
+    border-radius:0.4375rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.6) 100%);
+}
+.div-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    margin: 0 00.3125rem 0;
+}
+.instagram {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.instagram a {
+    
+    display: flex;
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    background-color:rgb(255, 219, 193);
+    padding: 0.1875rem;
+    border-radius:0.4375rem;
+    transition: all 55ms ease-in-out;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0.6) 100%);
+}
+.instagram a:hover {
+    border-radius: 1.25rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 0);
+
+   
+}
+/* aqui acaba o heading */
+
+/*  começo do main */
+.main {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/pão.jpeg);
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.sombra {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color:rgba(0, 0, 0,.2);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+}
+.div-main {
+    width: 75rem;
+    z-index: 10;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 25vh; 
+   text-shadow: 0.1875rem 0.1875rem black;
+}
+.h1-main {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0.625 rem,;
+}
+.main h2 {
+    font-size: 2.6rem;
+    margin: 1.25rem;
+}
+.main p {
+    font-size: 1.8rem;
+}
+.main ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center; 
+}
+.menu {
+    display: flex;
+   width: auto;
+   height: 4vh;
+   margin: 0.625rem;
+   border-radius: 0.625rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.2) 100%);
+}
+.ul-li {
+    margin: 0.625rem 0.9375rem 0.625rem 0.9375rem;
+    position: relative;
+}
+.a-li {
+    text-decoration: none;
+    color: #ffdbc1;
+    font-size: 1rem;
+
+}
+.a-li::after {
+    content: '';
+        position: absolute;
+        bottom:0.125rem;
+        left: 1.25rem;
+        width: 0%;
+        height: 0.055rem;
+        background-color: #ffdbc1;
+        transition: all 300ms ease-in-out;
+}
+.a-li:hover::after {
+    content: '';
+        position: absolute;
+        bottom:0.125rem;
+        left: 0;
+        width: 100%;
+        height: 0.055rem;
+        background-color: #ffdbc1;
+        transition: all 300ms ease-in-out;
+}
+
+.sobremim {
+    height: 100vh;
+}
+/* aqui acaba o main */
+.sobremim {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('../img/subtle-prism.png');
+    background-size: cover;
+    color: black;
+}
