@@ -68,7 +68,7 @@ html {
         z-index: 3;
         position: absolute;
 }
-
+/* fim da área de botões */
 body {
     font-family: 'open sans', sans-serif;
     color: rgb(255, 219, 194);
@@ -156,7 +156,88 @@ body {
     z-index: 1;
     position: absolute;
 }
+.babka-content::after {
+    content: '';
+    right: 0;
+    margin-top: 8rem;
+    top: 50%;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 800ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+}
+.babka-content:hover::after {
+    content: '';
+    right: 0;
+    height: 80%;
+    top: 0;
+    width: 0.01rem;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 500ms ease-in-out;
+    z-index: 3;
+    position: absolute;
+}
+.recheadão-content::after {
+    content: '';
+    right: 0;
+    margin-top: 8rem;
+    top: 50%;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 800ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+}
+.recheadão-content:hover::after {
+    content: '';
+    right: 0;
+    height: 80%;
+    top: 0;
+    width: 0.01rem;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 500ms ease-in-out;
+    z-index: 3;
+    position: absolute;
+}
 
+.cinnamon-content::after {
+    content: '';
+    left: 0;
+    top: 50%;
+    margin-top: 8rem;
+    height: 0;
+    width: 0;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 800ms ease-in-out;
+    z-index: -1;
+    position: absolute;
+}
+.cinnamon-content:hover::after {
+    content: '';
+    left: 0;
+    height: 80%;
+    top: 0;
+    width: 0.01rem;
+    bottom: 0;
+    display: block;
+    background: #ffdbc1;
+    transition: all 500ms ease-in-out;
+    z-index: 1;
+    position: absolute;
+}
 
 /* ceomço heading */
 .heading {
@@ -178,7 +259,9 @@ body {
     align-items: flex-start;
     z-index: 2;
 }
-.h1-heading {
+.a-heading {
+    text-decoration: none;
+    color: #ffdbc1;
     font-size: 0.8rem;
     margin-top: 0.625rem;
     padding: 0.1875rem;
@@ -727,7 +810,7 @@ margin-left: 10rem;
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-image: url('../img/27.png');
+    background-image: url('../img/img4.png');
     background-size: cover;
     color:#ffdbc1;
     display: flex;
@@ -848,7 +931,7 @@ margin-left: 10rem;
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background-image: url('../img/27.png');
+    background-image: url('../img/img3\ \(2\).png');
     background-size: cover;
     color:#ffdbc1;
     display: flex;
@@ -892,7 +975,16 @@ margin-left: 10rem;
     z-index: 1;
     display: flex;
 }
-
+.sombra-8 {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    display: flex;
+}
 .recheadão-img {
     width: 41.6875rem;
     height: 100vh;
@@ -962,3 +1054,111 @@ margin-left: 10rem;
     width: 16.5rem;
     height: 13.37rem;
     transition: all 300ms ease-in-out;
+}
+/* fim do recheadão */
+/* table */
+#produtos {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    background-image: url('../img/subtle-prism.png');
+    background-size: cover;
+    align-items: center;
+    position: relative;
+
+}
+.produtos-content {
+    width: 75rem;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    z-index: 3;
+    position: relative;
+    height: 100%;
+    justify-content: center;
+    align-items:center;
+}
+.produtos {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    display: flex;
+}
+table {
+color: black;
+width: 80%;
+height: 7rem;
+border-collapse: collapse;
+background-color: rgb(255, 255, 255);
+border: 0.3rem #000000 solid ;
+transition: all 300ms ease-in-out;
+
+}
+table:hover {
+    color: black;
+    width: 100%;
+    height: 12rem;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    border: 0.3rem #000000 solid ;
+    transition: all 300ms ease-in-out;
+}
+table thead th {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+table caption {
+    text-align: left;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+table td, table th {
+    text-align: left;
+    border: 0.01rem solid black;
+    padding: 0.1rem;
+    
+}
+/* aqui acaba table */
+/* wpp */
+.wpp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 0.1875rem 0.1875rem black;
+    color: white;
+   
+
+}
+.wpp a img:hover {
+    width: 12rem;
+    transition: all 300ms ease-in-out;
+    
+}
+.wpp h2 {
+    padding: 0.3rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+.wpp a img {
+    width: 10rem;
+    transition: all 300ms ease-in-out;
+}
+/* footer */
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 3rem;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+
+}
+footer h2 {
+    font-size: 0.6rem;
+    color: #7a685a;
+
+}
