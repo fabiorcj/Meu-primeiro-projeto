@@ -8,6 +8,7 @@
     box-sizing: border-box;
 }
 html {
+
     scroll-behavior: smooth;
 }
 /* botões */
@@ -72,9 +73,8 @@ html {
 body {
     font-family: 'open sans', sans-serif;
     color: rgb(255, 219, 194);
-    height: 100%;
-    width: 100%;
     position: relative;
+    overflow: auto;
 }
 .div-main::after {
     content: '';
@@ -99,10 +99,10 @@ body {
     display: block;
     background: #ffdbc1;
     transition: all 500ms ease-in-out;
-    z-index: 1;
+    z-index: 20;
     position: absolute;
 }
-.sobre-content::after {
+.sobre-grid::after {
     content: '';
     right: 0;
     margin-top: 8rem;
@@ -116,7 +116,7 @@ body {
     z-index: -1;
     position: absolute;
 }
-.sobre-content:hover::after {
+.sobre-grid:hover::after {
     content: '';
     right: 0;
     height: 80%;
@@ -126,10 +126,10 @@ body {
     display: block;
     background: #ffdbc1;
     transition: all 500ms ease-in-out;
-    z-index: 3;
+    z-index: 20;
     position: absolute;
 }
-.pizza-content::after {
+.pizza-grid::after {
     content: '';
     left: 0;
     top: 50%;
@@ -143,7 +143,7 @@ body {
     z-index: -1;
     position: absolute;
 }
-.pizza-content:hover::after {
+.pizza-grid:hover::after {
     content: '';
     left: 0;
     height: 80%;
@@ -153,10 +153,10 @@ body {
     display: block;
     background: #ffdbc1;
     transition: all 500ms ease-in-out;
-    z-index: 1;
+    z-index: 20;
     position: absolute;
 }
-.babka-content::after {
+.babka-grid::after {
     content: '';
     right: 0;
     margin-top: 8rem;
@@ -170,7 +170,7 @@ body {
     z-index: -1;
     position: absolute;
 }
-.babka-content:hover::after {
+.babka-grid:hover::after {
     content: '';
     right: 0;
     height: 80%;
@@ -183,7 +183,7 @@ body {
     z-index: 3;
     position: absolute;
 }
-.recheadão-content::after {
+.recheadão-grid::after {
     content: '';
     right: 0;
     margin-top: 8rem;
@@ -197,7 +197,7 @@ body {
     z-index: -1;
     position: absolute;
 }
-.recheadão-content:hover::after {
+.recheadão-grid:hover::after {
     content: '';
     right: 0;
     height: 80%;
@@ -211,7 +211,7 @@ body {
     position: absolute;
 }
 
-.cinnamon-content::after {
+.cinnamon-grid::after {
     content: '';
     left: 0;
     top: 50%;
@@ -225,7 +225,7 @@ body {
     z-index: -1;
     position: absolute;
 }
-.cinnamon-content:hover::after {
+.cinnamon-grid:hover::after {
     content: '';
     left: 0;
     height: 80%;
@@ -351,6 +351,7 @@ body {
     height: 100%;
     background-image: url(/assets/img/pão.jpeg);
     background-size: cover;
+    background-position: center center;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -375,6 +376,7 @@ body {
    align-items: center;
    margin-top: 25vh; 
    text-shadow: 0.1875rem 0.1875rem black;
+   height: 100%;
 }
 .h1-main {
     text-align: center;
@@ -384,9 +386,11 @@ body {
 .main h2 {
     font-size: 2.6rem;
     margin: 1.25rem;
+    text-align: center;
 }
 .main p {
     font-size: 1.8rem;
+    text-align: center;
 }
 .main ul {
     display: flex;
@@ -437,12 +441,12 @@ body {
 /* aqui acaba o main */
 /* sobre mim */
 
-#sobremim {
+.main-sobremim {
     width: 100%;
-    height: 100%;
     min-height: 100vh;
     background-image: url('../img/subtle-prism.png');
     background-size: cover;
+    background-position: center center;
     color:#ffdbc1;
     display: flex;
     position: relative;
@@ -463,9 +467,9 @@ body {
     padding: 0.4rem;
     border-radius: 1rem;
 }
-.sobre-content {
+.sobre-grid {
     width: 75rem;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 33.3125rem  1fr;
     z-index: 2;
@@ -487,12 +491,12 @@ body {
 }
 
 .sobremim-img {
-    width: 41.6875rem;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    max-height: 100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 33vh 33vh 33vh;
 
@@ -510,7 +514,7 @@ body {
 }
 
 .img-2:nth-child(1) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 3rem;
 }
 .img-2:nth-child(2) {
@@ -518,7 +522,7 @@ body {
 
 }
 .img-2:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 2rem;
 }
 .img-2:nth-child(5) {
@@ -559,12 +563,13 @@ body {
 }
 /* aqui acaba o sobre mim */
 /* Pizza */
-#pizza {
+.main-pizza {
     width: 100%;
     height: 100%;
     min-height: 100vh;
     background-image: url('../img/img2.png');
     background-size: cover;
+    background-position: center center;
     color:#ffdbc1;
     display: flex;
     position: relative;
@@ -584,9 +589,9 @@ body {
     padding: 0.4rem;
     border-radius: 1rem;
 }
-.pizza-content {
+.pizza-grid {
     width: 75rem;
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 32rem;
     z-index: 2;
@@ -613,13 +618,14 @@ body {
 
 .pizza-img {
     width: 41.6875rem;
-    height: 100vh;
+    height: 100%;
     display: grid;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
+    max-height: 100vh;
+     
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-rows:  33vh  33vh  33vh;
 
     
 }
@@ -643,11 +649,11 @@ body {
 
 }
 .img-3:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: 5rem;
    margin-left: 2rem;
 }
 .img-3:nth-child(5) {
-margin-left: 10rem;
+margin-left: 15rem;
    
     grid-column: span 2;
 }
@@ -685,12 +691,13 @@ margin-left: 10rem;
 /* aqui acaba o pizza */
 /* babka */
 
-#babka {
+.main-babka {
     width: 100%;
     height: 100%;
     min-height: 100vh;
     background-image: url('../img/27.png');
     background-size: cover;
+    background-position: center center;
     color:#ffdbc1;
     display: flex;
     position: relative;
@@ -710,10 +717,11 @@ margin-left: 10rem;
     background: rgba(0, 0, 0, 0.6);
     padding: 0.4rem;
     border-radius: 1rem;
+    
 }
-.babka-content {
+.babka-grid {
     width: 75rem;
-    height: 100vh;
+   height: 100%;
     display: grid;
     grid-template-columns: 33.3125rem  1fr;
     z-index: 2;
@@ -736,13 +744,14 @@ margin-left: 10rem;
 
 .babka-img {
     width: 41.6875rem;
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
     display: grid;
+    margin-top: 3rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-rows:  33vh  33vh  33vh;
 
     
 }
@@ -758,7 +767,7 @@ margin-left: 10rem;
 }
 
 .img-4:nth-child(1) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 3rem;
 }
 .img-4:nth-child(2) {
@@ -766,11 +775,10 @@ margin-left: 10rem;
 
 }
 .img-4:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 2rem;
 }
 .img-4:nth-child(5) {
-
     margin-left: 15rem;
     grid-column: span 2;
 }
@@ -806,12 +814,13 @@ margin-left: 10rem;
 }
 /* aqui acaba o babka */
 /* cinnamon */
-#cinnamon {
+.main-cinnamon {
     width: 100%;
     height: 100%;
     min-height: 100vh;
     background-image: url('../img/img4.png');
     background-size: cover;
+    background-position: center center;
     color:#ffdbc1;
     display: flex;
     position: relative;
@@ -832,9 +841,9 @@ margin-left: 10rem;
     padding: 0.4rem;
     border-radius: 1rem;
 }
-.cinnamon-content {
+.cinnamon-grid {
     width: 75rem;
-    height: 100vh;
+   height: 100%;
     display: grid;
     grid-template-columns: 1fr 32rem;
     z-index: 2;
@@ -857,13 +866,14 @@ margin-left: 10rem;
 
 .cinnamon-img {
     width: 41.6875rem;
-    height: 100vh;
+   height: 100%;
+   max-height: 100vh;
     display: grid;
+    margin-top: 3rem;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-rows:  33vh  33vh  33vh;
 
     
 }
@@ -879,7 +889,7 @@ margin-left: 10rem;
 }
 
 .img-5:nth-child(1) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 3rem;
 }
 .img-5:nth-child(2) {
@@ -887,7 +897,7 @@ margin-left: 10rem;
 
 }
 .img-5:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 2rem;
 }
 .img-5:nth-child(5) {
@@ -927,12 +937,13 @@ margin-left: 10rem;
 }
 /* ciinnamon acaba aqui */
 /* recheadão */
-#recheadão{
+.main-recheadão{
     width: 100%;
     height: 100%;
     min-height: 100vh;
     background-image: url('../img/img3\ \(2\).png');
-    background-size: cover;
+    background-size: cover; 
+    background-position: center center;
     color:#ffdbc1;
     display: flex;
     position: relative;
@@ -953,9 +964,9 @@ margin-left: 10rem;
     padding: 0.4rem;
     border-radius: 1rem;
 }
-.recheadão-content {
+.recheadão-grid {
     width: 75rem;
-    height: 100vh;
+   height: 100%;
     display: grid;
     grid-template-columns: 33.3125rem  1fr;
     z-index: 2;
@@ -987,20 +998,21 @@ margin-left: 10rem;
 }
 .recheadão-img {
     width: 41.6875rem;
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
     display: grid;
     flex-direction: column;
     align-items: center;
     margin-top: 3rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 33vh 33vh 33vh;
+    grid-template-rows:  33vh  33vh  33vh;
 
     
 }
 .img-7 {
     width: 14.5rem;
     height: 11.37rem;
-    margin: 0.625rem;
+    margin-top: 3rem;
     border-radius: 3rem;
     transition: all 300ms ease-in-out;
     box-shadow: 0.5rem 0.5rem 1px rgba(0, 0, 0, 0.2);
@@ -1009,7 +1021,7 @@ margin-left: 10rem;
 }
 
 .img-7:nth-child(1) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 3rem;
 }
 .img-7:nth-child(2) {
@@ -1017,7 +1029,7 @@ margin-left: 10rem;
 
 }
 .img-7:nth-child(3) {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 2rem;
 }
 .img-7:nth-child(5) {
@@ -1057,17 +1069,18 @@ margin-left: 10rem;
 }
 /* fim do recheadão */
 /* table */
-#produtos {
+.main-produtos {
     display: flex;
     justify-content: center;
     height: 50vh;
     background-image: url('../img/subtle-prism.png');
     background-size: cover;
+     background-position: center center;
     align-items: center;
     position: relative;
 
 }
-.produtos-content {
+.produtos-grid {
     width: 75rem;
     display: grid;
     grid-template-columns: 1fr  1fr;
@@ -1162,3 +1175,59 @@ footer h2 {
     color: #7a685a;
 
 }
+/* aqui acaba o footer */
+/* media queries */
+@media (max-width: 1200px) {
+    .sobre-grid, .pizza-grid, .babka-grid, .cinnamon-grid, .recheadão-grid, .produtos-grid {
+        grid-template-columns: 33.3125rem;
+        justify-content: center;
+
+    }
+    
+.sobre-img, .pizza-img, .babka-img, .cinnamon-img, .recheadão-img, .produtos-img {
+       
+       
+    }
+.img, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+    
+}
+
+.pizza, .cinnamon {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    
+}
+
+
+
+}
+@media (max-width: 800px) {
+
+    .sobre-grid, .pizza-grid, .babka-grid, .cinnamon-grid, .recheadão-grid, .produtos-grid {
+      
+
+    }
+    
+.sobre-img, .pizza-img, .babka-img, .cinnamon-img, .recheadão-img, .produtos-img {
+       
+       width: 100%;
+    }
+
+}
+
+@media (max-width: 628px) {
+    .sobre-img, .pizza-img, .babka-img, .cinnamon-img, .recheadão-img, .produtos-img {
+        
+       
+     }
+     .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+        width: 11.5rem;
+        height: 8.37rem;
+
+    }
+    .recheadão {
+        width: 80%;
+        
+    }
+}
+    
