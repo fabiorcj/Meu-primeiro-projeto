@@ -593,7 +593,7 @@ footer h2 {
 .img-grid:hover {
     width: 13.5rem;
     height: 11.37rem;
-    transition: 0;
+ 
 }
 .grid.img {
     grid-template-columns: 32.5rem;
@@ -613,7 +613,7 @@ footer h2 {
     .img-grid:hover {
         width: 14.5rem;
         height: 11.37rem;
-        transition: 0;
+      
     }
     .img-grid {
         width: 14.5rem;
@@ -621,7 +621,7 @@ footer h2 {
         margin: 0.625rem;
         border-radius: 3rem;
         transition: none;
-       
+    }
     .img-grid:nth-child(1) {
         margin-top: 0;
         margin-left: 0;
@@ -635,12 +635,10 @@ footer h2 {
     }
     .img-grid:nth-child(5) {
         margin-left: 0;
-        grid-column: 0;
     }
     .img-grid:hover {
         display: none;
     }
-
 }
 @media (max-width: 541px) {
     .div-heading {
@@ -719,4 +717,3 @@ footer h2 {
     }
    
 }
-
