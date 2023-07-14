@@ -136,7 +136,7 @@ body {
     width: 100%;
     height: 2rem;
     position: fixed;
-    z-index: 20;
+    z-index: 4;
     background-color: rgba(0, 0, 0, 0.2);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.8) 100%) ;
 }
@@ -360,6 +360,7 @@ body {
     grid-template-columns: 33.3125rem 1fr;
     z-index: 2;
     position: relative;
+    
 }
 .text-sections {
     margin-top: 3rem; 
@@ -574,16 +575,29 @@ footer h2 {
     color: #7a685a;
 }
 /* aqui acaba o footer */
+.close-menu {
+    display: none;
+}
 /* media queries */
 @media (max-width: 1200px) {
     .grid-img-left, .grid-img-righ {
         grid-template-columns: 1fr;
-        justify-content: center;
+        align-content: center;
     }
 .text-up {
     grid-column-start: 1;
     grid-row-start: 1;
 
+}
+
+.grid.img {
+    grid-template-columns: 32.5rem;
+}
+.text-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 }
 @media (max-width: 625px) {
@@ -611,16 +625,16 @@ footer h2 {
     }
 
 }
-@media (max-width: 533px) {
+@media (max-width: 541px) {
     .div-heading {
         height: auto;
         flex-direction: column;
-        justify-content: start;
         align-items: center;
     }
     .heading {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.8);
+        display: none;
     }
     .img {
         height: 29px;
@@ -630,6 +644,34 @@ footer h2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .close-menu-label::after {
+        content: "☰";
+        position: fixed;
+        z-index: 5;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+        padding: 0.2rem;
+        color: #000000;
+        cursor: pointer;
+        background: rgba(255, 219, 193, 0.726);
+    }
+/* × */
+    .close-menu:checked~.heading {
+        display: flex;
+    }
+    .close-menu:checked~.close-menu-label::after {
+        content: "×";
+        display: block;
+    }
+    .instagram {
+        margin-top: 1rem;
     }
 
 }

@@ -11,13 +11,15 @@
 
 </head>
 <body id="inicio">
+    <input class="close-menu" id="close-menu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close menu"></label>
     <header class="heading">
             <div class="div-heading">
-                <div class="div-img"> <a class="a-heading" href="#">Enrolados</a><img src="assets/img/logo.png"  class="img" alt="Logo Enrolados">
-                    <nav class="nav-top">
+                <div class="div-img" onclick="getElementById('close-menu').checked = false;"> <a class="a-heading" href="#">Enrolados</a><img src="assets/img/logo.png"  class="img" alt="Logo Enrolados">
+                    <nav class="nav-top" >  
                         <ul>
                             <li class="ul-li"><a class="a-li" href="#sobremim">Sobre Mim</a></li>
-                            <li class="ul-li"><a class="a-li" href="#pizza">Produtos</a></li>
+                            <li class="ul-li"><a class="a-li" href="#pizza">Produtos</a></li>   
                             <li class="ul-li"><a class="a-li" href="#footer">Peça Já</a></li>
                         </ul>
                     </nav>
