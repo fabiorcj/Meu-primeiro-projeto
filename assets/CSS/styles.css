@@ -290,12 +290,12 @@ body {
     display: flex;
    width: auto;
    height: 4vh;
-   margin: 0.625rem;
+   margin-top: 0.625rem;
    border-radius: 0.625rem;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.2) 100%);
 }
 .ul-li {
-    margin: 0.625rem 0.9375rem 0.625rem 0.9375rem;
+    margin: 0.625rem 0.755rem 0.625rem 0.755rem;
     position: relative;
 }
 .a-li {
@@ -479,7 +479,7 @@ body {
 .main-produtos {
     display: flex;
     justify-content: center;
-    height: 50vh;
+    min-height: 50vh;
     background-image: url('../img/subtle-prism.png');
     background-size: cover;
      background-position: center center;
@@ -487,7 +487,7 @@ body {
     position: relative;
 }
 .produtos-grid {
-    width: 75rem;
+    max-width: 75rem;
     display: grid;
     grid-template-columns: 1fr  1fr;
     z-index: 3;
@@ -500,7 +500,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-
     justify-content: center;
     display: flex;
 }
@@ -556,6 +555,7 @@ table td, table th {
     padding: 0.3rem;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
+    text-align: center;
 }
 .wpp a img {
     width: 10rem;
@@ -563,6 +563,7 @@ table td, table th {
 }
 /* footer */
 footer div{
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -672,7 +673,33 @@ footer h2 {
     }
     .instagram {
         margin-top: 1rem;
+    
+    }
+    .div-main {
+       
+       margin-top: 5vh; 
+       
+    }
+}
+
+@media (max-width: 500px) {
+    .produtos-grid {
+        grid-template-columns:  1fr;
+       
     }
 
+    .grid-img-left, .grid-img-righ {
+        align-content: center;
+    }
+    .grid-img {
+
+        grid-template-columns: 1fr;
+
+        overflow: auto;
+    
+    }
+    .text-sections h2 {
+        font-size: 3rem;
+    }
 }
 
